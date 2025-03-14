@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (isset($_SESSION['error'])) {
+    echo "<div id='toast' style='position: fixed; top: 20px; right: 20px; background-color: #f66; color: #fff; padding: 10px 20px; border-radius: 5px;'>" . $_SESSION['error'] . "</div>";
+    unset($_SESSION['error']);
+    echo "<script>
+        setTimeout(() => document.getElementById('toast').style.display = 'none', 5000);
+    </script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -141,10 +152,10 @@ https://templatemo.com/tm-589-lugx-gaming
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.php" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="committee.html">Managing Committee</a></li>
-                <li><a href="documents.html">Documents</a></li>
+                <li><a href="login.html">Documents</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>

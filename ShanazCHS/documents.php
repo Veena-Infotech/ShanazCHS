@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.html");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -87,7 +94,7 @@ https://templatemo.com/tm-589-lugx-gaming
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
-                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.php" >Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="committee.html">Managing Committee</a></li>
                 <li><a href="documents.html" class="active">Documents</a></li>
