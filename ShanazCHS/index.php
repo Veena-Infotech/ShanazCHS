@@ -153,9 +153,9 @@ https://templatemo.com/tm-589-lugx-gaming
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
               <img
-                src="./assets/images/Shanazlogo.png"
+                src="./assets//images//SHANAZlogo.jpg"
                 alt=""
-                style="width: 60px" />
+                style="width: 180px; border-radius: 20px" />
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
