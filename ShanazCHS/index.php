@@ -163,7 +163,7 @@ https://templatemo.com/tm-589-lugx-gaming
               <li><a href="index.php" class="active">Home</a></li>
               <li><a href="about.html">About Us</a></li>
               <li><a href="committee.html">Managing Committee</a></li>
-              <li><a href="login.html">Documents</a></li>
+              <li><a href="documents.php">Documents</a></li>
               <li><a href="gallery.html">Gallery</a></li>
               <li><a href="contact.html">Contact Us</a></li>
             </ul>
