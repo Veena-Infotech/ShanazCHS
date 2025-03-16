@@ -44,6 +44,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       .contact-btn:hover {
         background-color: #ff4d4d; /* Darker red on hover */
       }
+      .modal-body {
+      max-height: 70vh;
+      /* 80% of the viewport height, you can adjust this */
+      overflow-y: auto;
+      /* Enable vertical scrolling */
+      padding: 10px;
+    }
      </style>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -98,7 +105,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 <li><a href="index.php" >Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="committee.html">Managing Committee</a></li>
-                <li><a href="documents.html" class="active">Documents</a></li>
+                <li><a href="documents.php" class="active">Documents</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -118,7 +125,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-12">
           <h3>Our Documents</h3>
-          <span class="breadcrumb"><a href="#">Home</a>  >  <a href="#">Documents</a></span>
+          <span class="breadcrumb"><a href="index.php">Home</a>  >  <a href="documents.php">Documents</a></span>
         </div>
       </div>
     </div>
@@ -174,68 +181,67 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
   </div>
 
-  <section>
-    <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="appointment-paras" tabindex="-1"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <object width="100%" height="700"
-              data="./assets/Documents/dummy-docs.pdf"
-              type="application/pdf"> </object>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+<section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="appointment-paras" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-appointment-paras"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </section>
-  <!--Minutes General Body-->
-  <section>
-    <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="appointment-developer" tabindex="-1"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <object width="100%" height="700"
-              data="./assets/Documents/dummy-docs.pdf"
-              type="application/pdf"> </object>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+  </div>
+</section>
+<!--Minutes General Body-->
+<section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="appointment-developer" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-appointment-developer"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   <!--Agenda General Body-->
-  <section>
-    <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="crossConcent" tabindex="-1"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <object width="100%" height="700"
-              data="./assets/Documents/dummy-docs.pdf"
-              type="application/pdf"> </object>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+<section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="crossConcent" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-crossConcent"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
       <p class="mb-2">
@@ -256,6 +262,79 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+<script>
+  // Function to render PDF using pdf.js
+  function renderPDF(pdfUrl, containerId) {
+    const canvasContainer = document.getElementById(containerId);
+
+    // Ensure the container exists before proceeding
+    if (!canvasContainer) {
+      console.error(`Container with ID ${containerId} not found.`);
+      return;
+    }
+
+    // Load the PDF document using pdf.js
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+
+    loadingTask.promise.then(function (pdf) {
+      const totalPages = pdf.numPages;  // Get total number of pages
+      console.log("Total Pages in PDF: ", totalPages);
+
+      // Clear previous canvases (if any)
+      canvasContainer.innerHTML = '';
+
+      // Function to render each page in sequence
+      function renderPage(pageNum) {
+        if (pageNum > totalPages) return;
+
+        console.log("Rendering page: ", pageNum);
+
+        pdf.getPage(pageNum).then(function (page) {
+          const scale = 1.6; // Zoom level
+          const viewport = page.getViewport({ scale: scale });
+
+          // Create a canvas for the page and append it to the container
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+
+          // Set canvas dimensions
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+
+          // Render the page
+          page.render({
+            canvasContext: context,
+            viewport: viewport
+          }).promise.then(function () {
+            canvasContainer.appendChild(canvas); // Append the canvas
+            renderPage(pageNum + 1); // Move to the next page
+          });
+        });
+      }
+
+      // Start rendering from the first page
+      renderPage(1);
+    }).catch(function (error) {
+      console.error('Error loading PDF: ', error);
+    });
+  }
+
+  // Event listener to initialize the PDF when the modal is shown
+  document.getElementById('appointment-paras').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/dummy-docs.pdf', 'pdf-canvas-container-appointment-paras');
+  });
+
+  document.getElementById('appointment-developer').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/dummy-docs.pdf', 'pdf-canvas-container-appointment-developer');
+  });
+
+  document.getElementById('crossConcent').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/dummy-docs.pdf', 'pdf-canvas-container-crossConcent');
+  });
+</script>
+
 </body>
 
 </html>
