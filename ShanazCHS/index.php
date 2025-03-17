@@ -113,6 +113,38 @@ if (isset($_SESSION['error'])) {
     max-width: 300px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
   }
+  .custom-btn{
+    background-color: #d3d3d3;
+    border-radius: 25px;
+    padding: 10px 15px;
+    
+  }
+  .br{
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+  }
+  .background-image {
+    height: 100vh; /* Full viewport height */
+    background-image: url(./assets//images//about-us\ \(3\).jpeg);
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+    padding: 0; /* Remove excessive padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txt-white{
+  color: white;
+}
+.bg-white-custom{
+  background-color: #f7f7f7;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+  
+  
   </style>
   <link rel="stylesheet" href="assets/css/fontawesome.css" />
   <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css" />
@@ -145,62 +177,56 @@ https://templatemo.com/tm-589-lugx-gaming
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img
-                src="./assets//images//SHANAZlogo.jpg"
-                alt=""
-                style="width: 180px; border-radius: 20px" />
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="index.php" class="active">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="committee.html">Managing Committee</a></li>
-              <li><a href="documents.php">Documents</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <a class="menu-trigger">
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
+  <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
+      <div class="container">
+          <!-- Logo -->
+          <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
+              <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
+          </a>
+          
+          <!-- Toggle Button for Mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customNavbar" 
+                  aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="customNavbar">
+              <ul class="custom-nav navbar-nav ms-auto align-items-center">
+                  <li class="nav-item"><a class="nav-link custom-btn active" href="index.php">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
+                  <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
+                  <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                  <li class="nav-item"><a class="nav-link " href="contact.html">Contact Us</a></li>
+              </ul>
+          </div>
       </div>
-    </div>
-  </header>
+  </nav>
+
   <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner">
+  <div class="background-image ">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center">
-          <div class="caption header-text">
-            <h6>Welcome to</h6>
-            <h2>SHANAZ CHS</h2>
-            <p>Shanaz Apartment is strategically located in the prestigious
+          <div class="bg-white-custom">
+            <h6 >Welcome to</h6>
+            <h2 >SHANAZ CHS</h2>
+            <p class="mt-2">Shanaz Apartment is strategically located in the prestigious
               Malabar Hill area, offering seamless connectivity to major landmarks in Mumbai, including
               the iconic Gateway of India. The locality is well-connected via major roads such as the
               Eastern Express Highway, providing easy access to South Mumbai’s business hubs.
               Public transport options, including buses and taxis, are readily available, making daily
               commuting effortless</p>
-            <div class="d-flex gap-2 main-button">
+            <div class="d-flex gap-2 main-button mt-5">
               <a href="about.html" class="btn btn-primary">About Us</a>
               <a href="contact.html" class="btn btn-primary">Contact Us</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 offset-lg-2">
-          <div class="right-image">
-            <img src="./assets/images/hero.jpeg" alt="" />
-          </div>
+          
         </div>
       </div>
     </div>

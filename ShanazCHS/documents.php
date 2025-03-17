@@ -51,6 +51,15 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       /* Enable vertical scrolling */
       padding: 10px;
     }
+    .custom-btn{
+    background-color: #d3d3d3;
+    border-radius: 25px;
+    padding: 10px 15px;
+  }
+  .br{
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+  }
      </style>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -87,37 +96,33 @@ https://templatemo.com/tm-589-lugx-gaming
     <!-- ***** Preloader End ***** -->
 
     <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <nav class="main-nav">
-              <!-- ***** Logo Start ***** -->
-              <a href="index.html" class="logo">
-              <img
-                src="./assets//images//SHANAZlogo.jpg"
-                alt=""
-                style="width: 180px; border-radius: 20px" />
-              </a>
-              <!-- ***** Logo End ***** -->
-              <!-- ***** Menu Start ***** -->
-              <ul class="nav">
-                <li><a href="index.php" >Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="committee.html">Managing Committee</a></li>
-                <li><a href="documents.php" class="active">Documents</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
-              <a class="menu-trigger">
-                <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
-            </nav>
-          </div>
+    <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+        <!-- Logo -->
+        <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
+            <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
+        </a>
+        
+        <!-- Toggle Button for Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customNavbar" 
+                aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="customNavbar">
+            <ul class="custom-nav navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
+                <li class="nav-item"><a class="nav-link custom-btn active" href="documents.php">Documents</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
         </div>
-      </div>
-    </header>
+    </div>
+</nav>
+
     <!-- ***** Header Area End ***** -->
 
   <div class="page-heading header-text">
