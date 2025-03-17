@@ -138,7 +138,8 @@ if (isset($_SESSION['error'])) {
   color: white;
 }
 .bg-white-custom{
-  background-color: #f7f7f7;
+  background-color: rgba(247, 247, 247, 0.8);
+
   padding: 30px 40px;
   border-radius: 10px;
 }
