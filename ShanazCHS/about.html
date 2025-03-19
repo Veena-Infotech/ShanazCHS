@@ -6,10 +6,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <title>Shanaz Chs | About Us</title>
 
@@ -21,6 +20,9 @@
     <link rel="icon" type="image/png" href="./assets//images//Shanazlogo.png">
 
 <style>
+  .body{
+        font-family: "Montserrat", sans-serif;
+      }
     .custom-btn{
     background-color: #d3d3d3;
     border-radius: 25px;
@@ -41,6 +43,8 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    <!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   </head>
 
   <body>
@@ -79,6 +83,8 @@
                   <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
                   <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
                   <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pmc.html">PMC</a></li>
+
                   <li class="nav-item"><a class="nav-link " href="contact.html">Contact Us</a></li>
               </ul>
           </div>
@@ -93,7 +99,6 @@
         <div class="row">
           <div class="col-lg-12">
             <h3>About Us</h3>
-            <span class="breadcrumb"><a href="#">Home</a> >About Us</span>
           </div>
         </div>
       </div>
@@ -104,7 +109,7 @@
       <div class=" ">
         <div class="row g-0 align-items-center">
           <!-- Left Content -->
-          <div class="col-lg-6 p-4">
+          <div class="col-lg-6 p-4" data-aos="fade-down">
             <div class="">
               <h2 class="text-primary">Welcome to Shanaz CHS</h2>
               <p class="card-text">
@@ -125,7 +130,7 @@
           <!-- Right Image -->
           <div class="col-lg-6">
             <img
-              src="./assets/images/gateway.jpeg"
+              src="./assets/images/about-us (16).jpeg"
               class="img-fluid rounded-end"
               alt="Shanaz CHS Malabar Hill"
             />
@@ -134,7 +139,7 @@
       </div>
     </div>
 
-    <div class="container mt-4 tabs-content">
+    <div class="container mt-4 tabs-content" data-aos="fade-down">
       <div class=" ">
         <div class="row g-0 align-items-center">
           <!-- Left Content -->
@@ -168,71 +173,13 @@
       </div>
     </div>
 
-    <div class="features py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="item d-flex flex-column align-items-center text-center">
-              <div
-                class="image d-flex justify-content-center align-items-center mb-2"
-              >
-                <i
-                  class="ph ph-swimming-pool"
-                  style="font-size: 44px; color: #ffffff"
-                ></i>
-              </div>
-              <h4>Swimming Pool</h4>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="item d-flex flex-column align-items-center text-center">
-              <div
-                class="image d-flex justify-content-center align-items-center mb-2"
-              >
-                <i
-                  class="ph ph-car"
-                  style="font-size: 44px; color: #ffffff"
-                ></i>
-              </div>
-              <h4>Parking Space</h4>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="item d-flex flex-column align-items-center text-center">
-              <div
-                class="image d-flex justify-content-center align-items-center mb-2"
-              >
-                <i
-                  class="ph ph-shield-check"
-                  style="font-size: 44px; color: #ffffff"
-                ></i>
-              </div>
-              <h4>24/7 Security</h4>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="item d-flex flex-column align-items-center text-center">
-              <div
-                class="image d-flex justify-content-center align-items-center mb-2"
-              >
-                <i
-                  class="ph ph-tree"
-                  style="font-size: 44px; color: #ffffff"
-                ></i>
-              </div>
-              <h4>Garden Area</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <footer class="bg-dark text-white py-4">
       <div class="container text-center">
         <p class="mb-2">
           Copyright © 2025 Shanaz CHS. All rights reserved. Designed and
           Developed by
-          <a href="https://theveenagroup.com/" class="fw-bold">Veenainfotech</a>
+          <a href="https://theveenagroup.com/" class="fw-bold">VeenaInfotech</a>
         </p>
       </div>
     </footer>
@@ -245,5 +192,14 @@
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/counter.js"></script>
     <script src="assets/js/custom.js"></script>
+    <!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: true, // Animation occurs only once
+    easing: 'ease-in-out',
+  });
+</script>
   </body>
 </html>

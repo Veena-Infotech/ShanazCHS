@@ -17,10 +17,13 @@ if (isset($_SESSION['error'])) {
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="./assets//images//Shanazlogo.png">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <title>Shanaz CHS</title>
 
   <!-- Bootstrap core CSS -->
@@ -40,29 +43,13 @@ if (isset($_SESSION['error'])) {
       transform: scale(0.9);
     }
 
-    .gallery-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-    }
 
-    .gallery-wrapper {
-      display: flex;
-      white-space: nowrap;
-      gap: 15px;
-      animation: scrollGallery 20s linear infinite;
-    }
-
-    .gallery-wrapper:hover {
-      animation-play-state: paused;
-    }
 
     .gallery-item {
       flex: 0 0 auto;
       width: 300px;
       height: 200px;
       border-radius: 10px;
-      overflow: hidden;
     }
 
     .gallery-item img {
@@ -87,7 +74,7 @@ if (isset($_SESSION['error'])) {
     }
 
     .contact-btn {
-      background-color: #f66;
+      background-color: #0d6efd;
       /* Red background */
       color: white;
       /* White text */
@@ -109,43 +96,57 @@ if (isset($_SESSION['error'])) {
       background-color: #ff4d4d;
       /* Darker red on hover */
     }
+
     .small-image {
-    max-width: 300px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-  .custom-btn{
-    background-color: #d3d3d3;
-    border-radius: 25px;
-    padding: 10px 15px;
-    
-  }
-  .br{
-    border-bottom-right-radius: 45px;
-    border-bottom-left-radius: 45px;
-  }
-  .background-image {
-    height: 100vh; /* Full viewport height */
-    background-image: url(./assets//images//about-us\ \(3\).jpeg);
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents image repetition */
-    padding: 0; /* Remove excessive padding */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.txt-white{
-  color: white;
-}
-.bg-white-custom{
-  background-color: rgba(247, 247, 247, 0.8);
+      max-width: 300px;
+      /* Adjust size as needed */
+      height: auto;
+      /* Maintain aspect ratio */
+    }
 
-  padding: 30px 40px;
-  border-radius: 10px;
-}
+    .custom-btn {
+      background-color: #d3d3d3;
+      border-radius: 25px;
+      padding: 10px 15px;
+    }
 
-  
-  
+    .custom-btn.active {
+      background-color: #d3d3d3;
+      color: white;
+    }
+
+    .br {
+      border-bottom-right-radius: 45px;
+      border-bottom-left-radius: 45px;
+    }
+
+    .background-image {
+      height: 100vh;
+      /* Full viewport height */
+      background-image: url(./assets//images//about-us\ \(3\).jpeg);
+      background-size: cover;
+      /* Ensures the image covers the entire container */
+      background-position: center;
+      /* Centers the image */
+      background-repeat: no-repeat;
+      /* Prevents image repetition */
+      padding: 0;
+      /* Remove excessive padding */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .txt-white {
+      color: white;
+    }
+
+    .bg-white-custom {
+      background-color: rgba(247, 247, 247, 0.8);
+
+      padding: 30px 40px;
+      border-radius: 10px;
+    }
   </style>
   <link rel="stylesheet" href="assets/css/fontawesome.css" />
   <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css" />
@@ -179,30 +180,32 @@ https://templatemo.com/tm-589-lugx-gaming
 
   <!-- ***** Header Area Start ***** -->
   <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
-      <div class="container">
-          <!-- Logo -->
-          <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
-              <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
-          </a>
-          
-          <!-- Toggle Button for Mobile -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customNavbar" 
-                  aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <!-- Navbar Links -->
-          <div class="collapse navbar-collapse" id="customNavbar">
-              <ul class="custom-nav navbar-nav ms-auto align-items-center">
-                  <li class="nav-item"><a class="nav-link custom-btn active" href="index.php">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                  <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
-                  <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
-                  <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                  <li class="nav-item"><a class="nav-link " href="contact.html">Contact Us</a></li>
-              </ul>
-          </div>
+    <div class="container">
+      <!-- Logo -->
+      <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
+        <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
+      </a>
+
+      <!-- Toggle Button for Mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customNavbar"
+        aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="customNavbar">
+        <ul class="custom-nav navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link custom-btn active" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
+          <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pmc.html">PMC</a></li>
+
+          <li class="nav-item"><a class="nav-link " href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
+    </div>
   </nav>
 
   <!-- ***** Header Area End ***** -->
@@ -212,8 +215,8 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-6 align-self-center">
           <div class="bg-white-custom">
-            <h6 >Welcome to</h6>
-            <h2 >SHANAZ CHS</h2>
+            <h6>(REGD. No. : BOM/HSG/540 of 1963)</h6>
+            <h2>SHANAZ CHS</h2>
             <p class="mt-2">Shanaz Apartment is strategically located in the prestigious
               Malabar Hill area, offering seamless connectivity to major landmarks in Mumbai, including
               the iconic Gateway of India. The locality is well-connected via major roads such as the
@@ -227,7 +230,7 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
         <div class="col-lg-4 offset-lg-2">
-          
+
         </div>
       </div>
     </div>
@@ -284,7 +287,7 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
-  <div class="section about-us">
+  <div class="section about-us " data-aos="fade-down">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left Side: Text Content -->
@@ -318,7 +321,7 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
 
 
-  <div class="section committee tabs-content">
+  <div class="section committee tabs-content" data-aos="fade-down">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -327,58 +330,9 @@ https://templatemo.com/tm-589-lugx-gaming
             <h2>Meet Our Committee Members</h2>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Sr. No</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Position</th>
-                  <th scope="col">Contact</th>
-                  <th scope="col">Email</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Rajesh Sharma</td>
-                  <td>Chairman</td>
-                  <td>9876543210</td>
-                  <td>rajesh@example.com</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Anita Mehta</td>
-                  <td>Secretary</td>
-                  <td>9876543211</td>
-                  <td>anita@example.com</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Vikram Khanna</td>
-                  <td>Treasurer</td>
-                  <td>9876543212</td>
-                  <td>vikram@example.com</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Pooja Desai</td>
-                  <td>Member</td>
-                  <td>9876543213</td>
-                  <td>pooja@example.com</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Rahul Verma</td>
-                  <td>Member</td>
-                  <td>9876543214</td>
-                  <td>rahul@example.com</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        The managing committee of a society plays a crucial role in ensuring the smooth functioning and well-being of the community. They act as the backbone of the society, overseeing financial matters, maintenance, security, and overall governance. Their dedication and leadership foster harmony, transparency, and growth, making the residential environment more comfortable and organized for all members.
+
+        A well-managed committee promotes cooperation, listens to the concerns of residents, and makes fair decisions in the best interest of the community. Their commitment to service, problem-solving abilities, and teamwork contribute to creating a peaceful and thriving living space for everyone.
         <div class="d-flex justify-content-center">
           <a href="committee.html">
             <button class="contact-btn">View all committee members</button>
@@ -388,43 +342,43 @@ https://templatemo.com/tm-589-lugx-gaming
     </div>
   </div>
 
-  <div class="section latest-documents">
-  <div class="container">
-    <!-- Section Heading Centered -->
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="section-heading">
-          <h6>Documents</h6>
-          <h2>Latest Documents</h2>
+  <div class="section latest-documents" data-aos="fade-right">
+    <div class="container">
+      <!-- Section Heading Centered -->
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Documents</h6>
+            <h2>Latest Documents</h2>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="row align-items-center justify-content-center">
-      <!-- Left Side: Single Document -->
-      <div class="col-lg-6 text-center">
-        <div class="item">
-          <div class="thumb">
-            <img src="./assets/Documents/dummy-docs-pic.png" alt="Document" class="small-image">
-          </div>
-          <h5>Financial Report 2024</h5>
+      <div class="row align-items-center justify-content-center">
+        <!-- Left Side: Single Document -->
+        <div class="col-lg-6 text-center">
+          <div class="item">
+            <div class="thumb">
+              <img src="./assets//Documents//10jan.png" alt="Document" class="small-image">
+            </div>
+            <h5>Financial Report 2024</h5>
 
-          <!-- Below Image: Description & Button -->
-          <p>You can view all the society documents from the button given below.</p>
-          <div class="d-flex justify-content-center">
-            <a href="./documents.php">
-              <button class="contact-btn">View All Documents</button>
-            </a>
+            <!-- Below Image: Description & Button -->
+            <p>You can view all the society documents from the button given below.</p>
+            <div class="d-flex justify-content-center">
+              <a href="./documents.php">
+                <button class="contact-btn">View All Documents</button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
-  <div class="section gallery">
+  <div class="section gallery" data-aos="fade-down">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
@@ -434,46 +388,48 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
         <div class="col-lg-12">
-          <div class="gallery-container">
-            <div class="gallery-wrapper">
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery1.jpeg"
-                  alt="Gallery Image 1" />
+          <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./assets/images/gallery1.jpeg" class="d-block w-100" alt="Gallery Image 1">
               </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery2.jpeg"
-                  alt="Gallery Image 2" />
+              <div class="carousel-item">
+                <img src="./assets/images/gallery2.jpeg" class="d-block w-100" alt="Gallery Image 2">
               </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery3.jpeg"
-                  alt="Gallery Image 3" />
+              <div class="carousel-item">
+                <img src="./assets/images/gallery3.jpeg" class="d-block w-100" alt="Gallery Image 3">
               </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery4.jpeg"
-                  alt="Gallery Image 4" />
+              <div class="carousel-item">
+                <img src="./assets/images/gallery4.jpeg" class="d-block w-100" alt="Gallery Image 4">
               </div>
-              <div class="gallery-item">
-                <img
-                  src="./assets/images/gallery5.jpeg"
-                  alt="Gallery Image 5" />
+              <div class="carousel-item">
+                <img src="./assets/images/gallery5.jpeg" class="d-block w-100" alt="Gallery Image 5">
               </div>
             </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mt-3">
           <a href="gallery.html">
-            <button class="contact-btn">View Gallery</button>
+            <button class="contact-btn">View Full Gallery</button>
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="more-info mt-5">
+  <!-- Include Bootstrap CSS & JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <div class="more-info mt-5" data-aos="zoom-in">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -503,7 +459,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <p class="mb-2">
         Copyright © 2025 Shanaz CHS. All rights reserved. Designed and
         Developed by
-        <a href="https://theveenagroup.com/" class="fw-bold">Veenainfotech</a>
+        <a href="https://theveenagroup.com/" class="fw-bold">VeenaInfotech</a>
       </p>
     </div>
   </footer>
@@ -516,6 +472,15 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+  <!-- AOS JavaScript -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Animation occurs only once
+      easing: 'ease-in-out',
+    });
+  </script>
 </body>
 
 </html>

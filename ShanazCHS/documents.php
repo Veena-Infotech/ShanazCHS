@@ -13,11 +13,13 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./assets//images//Shanazlogo.png">
+    <!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
 
 
     <title>Sahnaz Chs | Documents
@@ -26,7 +28,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <!-- Bootstrap core CSS -->
      <style>
       .contact-btn {
-        background-color: #f66; /* Red background */
+        background-color: #0d6efd;
+        /* Red background */
         color: white; /* White text */
         font-weight: bold;
         font-size: 16px;
@@ -117,6 +120,8 @@ https://templatemo.com/tm-589-lugx-gaming
                 <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
                 <li class="nav-item"><a class="nav-link custom-btn active" href="documents.php">Documents</a></li>
                 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pmc.html">PMC</a></li>
+
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
             </ul>
         </div>
@@ -129,23 +134,22 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h3>Our Documents</h3>
-          <span class="breadcrumb"><a href="index.php">Home</a>  >  <a href="documents.php">Documents</a></span>
+          <h3>Important Documents</h3>
         </div>
       </div>
     </div>
   </div>
 
   
-  <div class="container overflow-hidden mt-5">
+  <div class="container overflow-hidden mt-5" data-aos="fade-right">
     <div class="row gy-4 gy-lg-0 gx-xxl-5">
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
           <div class="card-body p-0">
             <figure class="m-0 p-0">
-              <img class="img-fluid" loading="lazy" src="./assets/Documents/dummy-docs-pic.png" alt="">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents///feas-report.png" alt="">
               <figcaption class="m-0 p-4">
-                <h4 class="mb-1">Dummy Doc 1</h4>
+                <h4 class="mb-1">Feasibility Report Headway Development Management LLP</h4>
                 <a data-bs-toggle="modal" data-bs-target="#appointment-paras" class="contact-btn">Open Document</a>
 
               </figcaption>
@@ -157,9 +161,9 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
           <div class="card-body p-0">
             <figure class="m-0 p-0">
-              <img class="img-fluid" loading="lazy" src="./assets/Documents/dummy-docs-pic.png" alt="">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents//feas-rep-nepean.png" alt="">
               <figcaption class="m-0 p-4">
-                <h4 class="mb-1">Dummy Doc 2</h4>
+                <h4 class="mb-1">Feasibility Report Mangurdekar & Asso.</h4>
                 <a data-bs-toggle="modal" data-bs-target="#appointment-developer" class="contact-btn">Open Document</a>
               </figcaption>
 
@@ -171,10 +175,52 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
           <div class="card-body p-0">
             <figure class="m-0 p-0">
-              <img class="img-fluid" loading="lazy" src="./assets/Documents/dummy-docs-pic.png" alt="">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents//notice and mins.png" alt="">
               <figcaption class="m-0 p-4">
-                <h4 class="mb-1">Dummy Doc 3</h4>
+                <h4 class="mb-1">Notice & Minutes 19.6.2024</h4>
                 <a data-bs-toggle="modal" data-bs-target="#crossConcent" class="contact-btn">Open Document</a>
+
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents//notice-20th.png" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Notice & Minutes of SGBM Dtd. 6.12.2024</h4>
+                <a data-bs-toggle="modal" data-bs-target="#notice-24" class="contact-btn">Open Document</a>
+
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents//10jan.png" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Notice & Minutes of SGBM Dtd. 24.1.2025</h4>
+                <a data-bs-toggle="modal" data-bs-target="#10jan" class="contact-btn">Open Document</a>
+
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents//3march.png" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Notice & Minutes 19.6.2024</h4>
+                <a data-bs-toggle="modal" data-bs-target="#3march" class="contact-btn">Open Document</a>
 
               </figcaption>
             </figure>
@@ -247,13 +293,77 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
 </section>
 
+ <!--notice 24th-->
+ <section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="notice-24" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-notice-24"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--notice 10th-->
+<section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="10jan" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-10jan"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--notice 3march-->
+<section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="3march" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-3march"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
       <p class="mb-2">
         Copyright © 2025 Shanaz CHS. All rights reserved. Designed and
         Developed by
         <a href="https://theveenagroup.com/"  class="fw-bold"
-          >Veenainfotech</a
+          >VeenaInfotech</a
         >
       </p>
     </div>
@@ -328,15 +438,34 @@ https://templatemo.com/tm-589-lugx-gaming
 
   // Event listener to initialize the PDF when the modal is shown
   document.getElementById('appointment-paras').addEventListener('show.bs.modal', function () {
-    renderPDF('./assets/Documents/dummy-docs.pdf', 'pdf-canvas-container-appointment-paras');
+    renderPDF('./assets/Documents/Feasibility Report Headway Development Management LLP.pdf', 'pdf-canvas-container-appointment-paras');
   });
 
   document.getElementById('appointment-developer').addEventListener('show.bs.modal', function () {
-    renderPDF('./assets/Documents/dummy-docs.pdf', 'pdf-canvas-container-appointment-developer');
+    renderPDF('./assets/Documents/Feasibility Report Mangurdekar & Asso..pdf', 'pdf-canvas-container-appointment-developer');
   });
 
   document.getElementById('crossConcent').addEventListener('show.bs.modal', function () {
-    renderPDF('./assets/Documents/dummy-docs.pdf', 'pdf-canvas-container-crossConcent');
+    renderPDF('./assets/Documents/Notice & Minutes 19.6.2024.pdf', 'pdf-canvas-container-crossConcent');
+  });
+
+  document.getElementById('notice-24').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/Notice & Minutes of SGBM Dtd. 6.12.2024.pdf', 'pdf-canvas-container-notice-24');
+  });
+  document.getElementById('10jan').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/Notice & Minutes of SGBM Dtd. 24.1.2025.pdf', 'pdf-canvas-container-10jan');
+  });
+  document.getElementById('3march').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/Notice for SGBM dtd. 19.3.2025.pdf', 'pdf-canvas-container-3march');
+  });
+</script>
+<!-- AOS JavaScript -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: true, // Animation occurs only once
+    easing: 'ease-in-out',
   });
 </script>
 
