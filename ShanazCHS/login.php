@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         $_SESSION['loggedin'] = true;
-        header("Location: documents.php");
+        header("Location: index.php");
     } else {
         $_SESSION['error'] = "Incorrect email or password.";
-        header("Location: index.php");
+        header("Location: login.html");
     }
     exit();
 }

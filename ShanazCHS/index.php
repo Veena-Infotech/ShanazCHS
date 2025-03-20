@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+
+//Checking if the user is logged in or not if not then redirect to login page
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+  header("Location: login.html");
+  exit();
+}
+
 if (isset($_SESSION['error'])) {
   echo "<div id='toast' style='position: fixed; top: 20px; right: 20px; background-color: #f66; color: #fff; padding: 10px 20px; border-radius: 5px;'>" . $_SESSION['error'] . "</div>";
   unset($_SESSION['error']);
@@ -182,7 +190,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
     <div class="container">
       <!-- Logo -->
-      <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
+      <a class="custom-logo navbar-brand d-flex align-items-center" href="index.php">
         <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
       </a>
 
@@ -196,13 +204,13 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="collapse navbar-collapse" id="customNavbar">
         <ul class="custom-nav navbar-nav ms-auto align-items-center">
           <li class="nav-item"><a class="nav-link custom-btn active" href="index.php">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="committee.php">Managing Committee</a></li>
           <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="pmc.html">PMC</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pmc.php">PMC</a></li>
 
-          <li class="nav-item"><a class="nav-link " href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link " href="contact.php">Contact Us</a></li>
         </ul>
       </div>
     </div>

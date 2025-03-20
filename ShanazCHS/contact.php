@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -149,7 +157,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
       <div class="container">
           <!-- Logo -->
-          <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
+          <a class="custom-logo navbar-brand d-flex align-items-center" href="index.php">
               <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
           </a>
           
@@ -163,13 +171,13 @@ https://templatemo.com/tm-589-lugx-gaming
           <div class="collapse navbar-collapse" id="customNavbar">
               <ul class="custom-nav navbar-nav ms-auto align-items-center">
                   <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                  <li class="nav-item"><a class="nav-link" href="committee.html">Managing Committee</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="committee.php">Managing Committee</a></li>
                   <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
-                  <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="pmc.html">PMC</a></li>
+                  <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="pmc.php">PMC</a></li>
 
-                  <li class="nav-item"><a class="nav-link custom-btn active" href="contact.html">Contact Us</a></li>
+                  <li class="nav-item"><a class="nav-link custom-btn active" href="contact.php">Contact Us</a></li>
               </ul>
           </div>
       </div>
