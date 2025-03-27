@@ -123,6 +123,7 @@ https://templatemo.com/tm-589-lugx-gaming
           <li class="nav-item"><a class="nav-link" href="pmc.php">PMC</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                <li class="nav-item btn btn-danger" style="background-color:rgba(255, 77, 77, 0.9); margin-left: 10px; border-radius: 10px;"><a class="nav-link " href="logout.php">Log Out</a></li>
             </ul>
         </div>
     </div>
@@ -386,55 +387,108 @@ https://templatemo.com/tm-589-lugx-gaming
 
     // Ensure the container exists before proceeding
     if (!canvasContainer) {
-      console.error(`Container with ID ${containerId} not found.`);
-      return;
+        console.error(`Container with ID ${containerId} not found.`);
+        return;
     }
+
+    // Get the modal ID from the container
+    const modal = canvasContainer.closest('.modal');
+    if (!modal) {
+        console.error(`No modal found for container ID: ${containerId}`);
+        return;
+    }
+
+    const modalId = modal.id;
+    const modalHeader = modal.querySelector('.modal-header');
+
+    if (!modalHeader) {
+        console.error(`Modal header not found for modal ID: ${modalId}`);
+        return;
+    }
+
+    // Remove existing download button if any
+    const existingBtn = document.getElementById(`download-btn-${modalId}`);
+    if (existingBtn) existingBtn.remove();
+
+    // Create a new download button
+    const downloadBtn = document.createElement('button');
+    downloadBtn.id = `download-btn-${modalId}`;
+    downloadBtn.innerText = 'Download PDF';
+    downloadBtn.style.padding = '8px 16px';
+    downloadBtn.style.marginLeft = 'auto';
+    downloadBtn.style.backgroundColor = '#28a745';
+    downloadBtn.style.color = '#fff';
+    downloadBtn.style.border = 'none';
+    downloadBtn.style.borderRadius = '5px';
+    downloadBtn.style.cursor = 'pointer';
+
+    // Add hover effect
+    downloadBtn.onmouseover = () => downloadBtn.style.backgroundColor = '#218838';
+    downloadBtn.onmouseout = () => downloadBtn.style.backgroundColor = '#28a745';
+
+    // Add click event to download the PDF
+    downloadBtn.addEventListener('click', function () {
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = pdfUrl.split('/').pop(); // Extracts filename from URL
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+
+    // Append the button to the modal header
+    modalHeader.appendChild(downloadBtn);
 
     // Load the PDF document using pdf.js
     const loadingTask = pdfjsLib.getDocument(pdfUrl);
 
     loadingTask.promise.then(function (pdf) {
-      const totalPages = pdf.numPages;  // Get total number of pages
-      console.log("Total Pages in PDF: ", totalPages);
+        const totalPages = pdf.numPages;  // Get total number of pages
+        console.log("Total Pages in PDF: ", totalPages);
 
-      // Clear previous canvases (if any)
-      canvasContainer.innerHTML = '';
+        // Clear previous canvases (if any)
+        canvasContainer.innerHTML = '';
 
-      // Function to render each page in sequence
-      function renderPage(pageNum) {
-        if (pageNum > totalPages) return;
+        // Function to render each page in sequence
+        function renderPage(pageNum) {
+            if (pageNum > totalPages) return;
 
-        console.log("Rendering page: ", pageNum);
+            console.log("Rendering page: ", pageNum);
 
-        pdf.getPage(pageNum).then(function (page) {
-          const scale = 1.6; // Zoom level
-          const viewport = page.getViewport({ scale: scale });
+            pdf.getPage(pageNum).then(function (page) {
+                const scale = 1.6; // Zoom level
+                const viewport = page.getViewport({ scale: scale });
 
-          // Create a canvas for the page and append it to the container
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
+                // Create a canvas for the page and append it to the container
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
 
-          // Set canvas dimensions
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
+                // Set canvas dimensions
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
 
-          // Render the page
-          page.render({
-            canvasContext: context,
-            viewport: viewport
-          }).promise.then(function () {
-            canvasContainer.appendChild(canvas); // Append the canvas
-            renderPage(pageNum + 1); // Move to the next page
-          });
-        });
-      }
+                // Render the page
+                page.render({
+                    canvasContext: context,
+                    viewport: viewport
+                }).promise.then(function () {
+                    canvasContainer.appendChild(canvas); // Append the canvas
+                    renderPage(pageNum + 1); // Move to the next page
+                });
+            });
+        }
 
-      // Start rendering from the first page
-      renderPage(1);
+        // Start rendering from the first page
+        renderPage(1);
     }).catch(function (error) {
-      console.error('Error loading PDF: ', error);
+        console.error('Error loading PDF: ', error);
     });
-  }
+}
+
+// Calling function in modal event listener
+document.getElementById('appointment-paras').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/Feasibility Report Headway Development Management LLP.pdf', 'pdf-canvas-container-appointment-paras');
+});
 
   // Event listener to initialize the PDF when the modal is shown
   document.getElementById('appointment-paras').addEventListener('show.bs.modal', function () {

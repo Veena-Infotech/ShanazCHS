@@ -22,12 +22,11 @@ if (isset($_SESSION['error'])) {
 
 <head>
   <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="./assets//images//Shanazlogo.png">
   <!-- AOS CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -160,9 +159,7 @@ if (isset($_SESSION['error'])) {
   <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css" />
   <link rel="stylesheet" href="assets/css/owl.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <!--
 
 TemplateMo 589 lugx gaming
@@ -209,8 +206,9 @@ https://templatemo.com/tm-589-lugx-gaming
           <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.php">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="pmc.php">PMC</a></li>
-
           <li class="nav-item"><a class="nav-link " href="contact.php">Contact Us</a></li>
+          <li class="nav-item btn btn-danger" style="background-color:rgba(255, 77, 77, 0.9); margin-left: 10px; border-radius: 10px;"><a class="nav-link " href="logout.php">Log Out</a></li>
+
         </ul>
       </div>
     </div>
@@ -249,44 +247,32 @@ https://templatemo.com/tm-589-lugx-gaming
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="item d-flex flex-column align-items-center text-center">
-            <div
-              class="image d-flex justify-content-center align-items-center mb-2">
-              <i
-                class="ph ph-swimming-pool"
-                style="font-size: 44px; color: #ffffff"></i>
+            <div class="image d-flex justify-content-center align-items-center mb-2">
+              <i class="ph ph-swimming-pool" style="font-size: 44px; color: #ffffff"></i>
             </div>
             <h4>Swimming Pool</h4>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="item d-flex flex-column align-items-center text-center">
-            <div
-              class="image d-flex justify-content-center align-items-center mb-2">
-              <i
-                class="ph ph-car"
-                style="font-size: 44px; color: #ffffff"></i>
+            <div class="image d-flex justify-content-center align-items-center mb-2">
+              <i class="ph ph-car" style="font-size: 44px; color: #ffffff"></i>
             </div>
             <h4>Parking Space</h4>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="item d-flex flex-column align-items-center text-center">
-            <div
-              class="image d-flex justify-content-center align-items-center mb-2">
-              <i
-                class="ph ph-shield-check"
-                style="font-size: 44px; color: #ffffff"></i>
+            <div class="image d-flex justify-content-center align-items-center mb-2">
+              <i class="ph ph-shield-check" style="font-size: 44px; color: #ffffff"></i>
             </div>
             <h4>24/7 Security</h4>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
           <div class="item d-flex flex-column align-items-center text-center">
-            <div
-              class="image d-flex justify-content-center align-items-center mb-2">
-              <i
-                class="ph ph-tree"
-                style="font-size: 44px; color: #ffffff"></i>
+            <div class="image d-flex justify-content-center align-items-center mb-2">
+              <i class="ph ph-tree" style="font-size: 44px; color: #ffffff"></i>
             </div>
             <h4>Garden Area</h4>
           </div>
@@ -338,9 +324,14 @@ https://templatemo.com/tm-589-lugx-gaming
             <h2>Meet Our Committee Members</h2>
           </div>
         </div>
-        The managing committee of a society plays a crucial role in ensuring the smooth functioning and well-being of the community. They act as the backbone of the society, overseeing financial matters, maintenance, security, and overall governance. Their dedication and leadership foster harmony, transparency, and growth, making the residential environment more comfortable and organized for all members.
+        The managing committee of a society plays a crucial role in ensuring the smooth functioning and well-being of
+        the community. They act as the backbone of the society, overseeing financial matters, maintenance, security, and
+        overall governance. Their dedication and leadership foster harmony, transparency, and growth, making the
+        residential environment more comfortable and organized for all members.
 
-        A well-managed committee promotes cooperation, listens to the concerns of residents, and makes fair decisions in the best interest of the community. Their commitment to service, problem-solving abilities, and teamwork contribute to creating a peaceful and thriving living space for everyone.
+        A well-managed committee promotes cooperation, listens to the concerns of residents, and makes fair decisions in
+        the best interest of the community. Their commitment to service, problem-solving abilities, and teamwork
+        contribute to creating a peaceful and thriving living space for everyone.
         <div class="d-flex justify-content-center">
           <a href="committee.html">
             <button class="contact-btn">View all committee members</button>
