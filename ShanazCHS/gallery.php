@@ -64,6 +64,49 @@ img {
     border-bottom-right-radius: 45px;
     border-bottom-left-radius: 45px;
   }
+  .video-container video {
+    width: 100%;
+    max-width: 100%; /* Adjust this value to control video size */
+    max-height: 100%; /* Adjust height as needed */
+    cursor: pointer;
+}
+
+.modal video {
+    width: 50%; /* Adjust this value for modal size */
+    max-width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 50%;
+        height: 50%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal video {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
 
     </style>
     <!-- Bootstrap core CSS -->
@@ -196,8 +239,21 @@ img {
             <div>
               <img src="./assets/images/about-us (24).jpeg" alt="galleryImg" loading="lazy">
             </div>
+            <div class="video-container" onclick="openVideoModal('./assets/images/trim1.mp4')">
+            <video src="./assets/images/trim1.mp4" muted></video>
+        </div>
+
+        <div class="video-container" onclick="openVideoModal('./assets/images/trim2.mp4')">
+            <video src="./assets/images/trim2.mp4" muted></video>
+        </div>
           </section>
     </div>
+
+    <!-- Modal for video zoom -->
+<div id="videoModal" class="modal">
+    <span class="close" onclick="closeVideoModal()">&times;</span>
+    <video id="modalVideo" controls autoplay></video>
+</div>
 
   
 
@@ -212,6 +268,26 @@ img {
         </p>
       </div>
     </footer>
+
+    <script>
+    function openVideoModal(videoSrc) {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        modal.style.display = 'flex';
+        modalVideo.src = videoSrc;
+        modalVideo.play();
+    }
+
+    function closeVideoModal() {
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+
+        modal.style.display = 'none';
+        modalVideo.pause();
+        modalVideo.src = "";
+    }
+</script>
 
     <!-- Scripts -->
     <!-- Bootstrap core JavaScript -->
