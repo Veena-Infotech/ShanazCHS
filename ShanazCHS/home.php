@@ -4,7 +4,7 @@ session_start();
 
 //Checking if the user is logged in or not if not then redirect to login page
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-  header("Location: login.html");
+  header("Location: index.html");
   exit();
 }
 
@@ -200,7 +200,7 @@ https://templatemo.com/tm-589-lugx-gaming
       <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="customNavbar">
         <ul class="custom-nav navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="nav-link custom-btn active" href="index.php">Home</a></li>
+          <li class="nav-item"><a class="nav-link custom-btn active" href="home.php">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="committee.php">Managing Committee</a></li>
           <li class="nav-item"><a class="nav-link " href="documents.php">Documents</a></li>
@@ -248,9 +248,9 @@ https://templatemo.com/tm-589-lugx-gaming
         <div class="col-lg-3 col-md-6">
           <div class="item d-flex flex-column align-items-center text-center">
             <div class="image d-flex justify-content-center align-items-center mb-2">
-              <i class="ph ph-swimming-pool" style="font-size: 44px; color: #ffffff"></i>
+              <i class="ph ph-puzzle-piece" style="font-size: 44px; color: #ffffff"></i>
             </div>
-            <h4>Swimming Pool</h4>
+            <h4>Children's Play Area</h4>
           </div>
         </div>
         <div class="col-lg-3 col-md-6">

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: login.html");
+    header("Location: index.html");
     exit();
 }
 ?>
@@ -115,7 +115,7 @@ https://templatemo.com/tm-589-lugx-gaming
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="customNavbar">
             <ul class="custom-nav navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="committee.php">Managing Committee</a></li>
                 <li class="nav-item"><a class="nav-link custom-btn active" href="documents.php">Documents</a></li>
