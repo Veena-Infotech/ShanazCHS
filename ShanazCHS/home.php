@@ -187,7 +187,7 @@ https://templatemo.com/tm-589-lugx-gaming
   <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
     <div class="container">
       <!-- Logo -->
-      <a class="custom-logo navbar-brand d-flex align-items-center" href="index.php">
+      <a class="custom-logo navbar-brand d-flex align-items-center" href="home.php">
         <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
       </a>
 
@@ -230,8 +230,8 @@ https://templatemo.com/tm-589-lugx-gaming
               Public transport options, including buses and taxis, are readily available, making daily
               commuting effortless</p>
             <div class="d-flex gap-2 main-button mt-5">
-              <a href="about.html" class="btn btn-primary">About Us</a>
-              <a href="contact.html" class="btn btn-primary">Contact Us</a>
+              <a href="about.php" class="btn btn-primary">About Us</a>
+              <a href="contact.php" class="btn btn-primary">Contact Us</a>
             </div>
           </div>
         </div>
@@ -300,7 +300,7 @@ https://templatemo.com/tm-589-lugx-gaming
             tailored for comfort and sophistication.
           </p>
           <div class="d-flex">
-            <a href="about.html">
+            <a href="about.php">
               <button class="contact-btn">Read More</button>
             </a>
           </div>
@@ -333,7 +333,7 @@ https://templatemo.com/tm-589-lugx-gaming
         the best interest of the community. Their commitment to service, problem-solving abilities, and teamwork
         contribute to creating a peaceful and thriving living space for everyone.
         <div class="d-flex justify-content-center">
-          <a href="committee.html">
+          <a href="committee.php">
             <button class="contact-btn">View all committee members</button>
           </a>
         </div>
@@ -415,7 +415,7 @@ https://templatemo.com/tm-589-lugx-gaming
           </div>
         </div>
         <div class="d-flex justify-content-center mt-3">
-          <a href="gallery.html">
+          <a href="gallery.php">
             <button class="contact-btn">View Full Gallery</button>
           </a>
         </div>
@@ -443,7 +443,7 @@ https://templatemo.com/tm-589-lugx-gaming
               inquiries, support, or just to say hello!
             </p>
             <div class="d-flex justify-content-center">
-              <a href="contact.html">
+              <a href="contact.php">
                 <button class="contact-btn">Contact Us</button>
               </a>
             </div>

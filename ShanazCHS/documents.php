@@ -75,13 +75,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       rel="stylesheet"
       href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
     />
-    <!--
-
-TemplateMo 589 lugx gaming
-
-https://templatemo.com/tm-589-lugx-gaming
-
--->
+  
   </head>
 
   <body>
@@ -102,7 +96,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
     <div class="container">
         <!-- Logo -->
-        <a class="custom-logo navbar-brand d-flex align-items-center" href="index.html">
+        <a class="custom-logo navbar-brand d-flex align-items-center" href="home.php">
             <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
         </a>
         

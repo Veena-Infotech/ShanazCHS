@@ -89,7 +89,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <nav class="custom-navbar navbar navbar-expand-lg br navbar-light bg-light shadow-sm fixed-top">
       <div class="container">
           <!-- Logo -->
-          <a class="custom-logo navbar-brand d-flex align-items-center" href="index.php">
+          <a class="custom-logo navbar-brand d-flex align-items-center" href="home.php">
               <img src="./assets/images/SHANAZlogo.jpg" alt="Logo" style="width: 180px; border-radius: 20px;">
           </a>
           
@@ -214,40 +214,76 @@ https://templatemo.com/tm-589-lugx-gaming
                 <thead class="thead-dark" >
                   <tr>
                     <th scope="col">Sr. No</th>
+                    <th scope="col">Flat No.</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Role</th>
                    
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Sunil Patil</td>
-                    <td>Project Head</td>
+                    <td>12-C</td>
+                    <td>DR. MS. INDIRA HINDUJA</td>
               
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Neha Joshi</td>
-                    <td>Legal Advisor</td>
+                    <td>17-D</td>
+                    <td>MR. SHRENIK SHAH</td>
        
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Arun Saxena</td>
-                    <td>Finance Head</td>
+                    <td>14-C</td>
+                    <td>MR. SATISH AMLANI</td>
        
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>Meera Iyer</td>
-                    <td>Member</td>
+                    <td>13-A</td>
+                    <td>MR. VIBHAV PARIKH</td>
                
                   </tr>
                   <tr>
                     <td>5</td>
-                    <td>Prakash Nair</td>
-                    <td>Member</td>
+                    <td>10-D</td>
+                    <td>MR. ANISH BHANSALI</td>
+            
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>3-C</td>
+                    <td>MR. SAMAY KORADIA</td>
+            
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>11-C</td>
+                    <td>MR. BRIJESH SHAH</td>
+            
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>7-C</td>
+                    <td>MR. RAMESH LAKHOTIA</td>
+            
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>1-A</td>
+                    <td>MR. RAJEEV MEHTA</td>
+            
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>15-A</td>
+                    <td>MR. SHAUNAK SHAH</td>
+            
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>4-A</td>
+                    <td>MR. UNMESH KANTAWALA</td>
             
                   </tr>
                 </tbody>
