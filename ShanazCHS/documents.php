@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 
 
-    <title>Sahnaz Chs | Documents
+    <title>Shanaz Chs | Documents
     </title>
 
     <!-- Bootstrap core CSS -->
@@ -220,9 +220,23 @@ https://templatemo.com/tm-589-lugx-gaming
             <figure class="m-0 p-0">
               <img class="img-fluid" loading="lazy" src="./assets//Documents//3march.png" alt="">
               <figcaption class="m-0 p-4">
-                <h4 class="mb-1">Notice & Minutes 19.6.2024</h4>
+                <h4 class="mb-1">Notice for SGBM Dated 03.03.2025</h4>
                 <a data-bs-toggle="modal" data-bs-target="#3march" class="contact-btn">Open Document</a>
 
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents//minutes-19thMarch2025.png" alt="">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">Minutes for SGBM Dated 19th Mar,2025</h4>
+                <a data-bs-toggle="modal" data-bs-target="#minutes-19march" class="contact-btn">Open Document</a>
+                
               </figcaption>
             </figure>
           </div>
@@ -357,15 +371,34 @@ https://templatemo.com/tm-589-lugx-gaming
   </div>
 </section>
 
+<!--minutes 19th March -->
+<section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="minutes-19march" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="pdf-canvas-container-19march"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
       <p class="mb-2">
         Copyright © 2025 Shanaz CHS. All rights reserved. Designed and
         Developed by
-        <a href="https://theveenagroup.com/"  class="fw-bold"
-          >VeenaInfotech</a
-        >
+        <a href="https://theveenagroup.com/"  class="fw-bold">VeenaInfotech</a>
       </p>
     </div>
   </footer>
@@ -511,6 +544,9 @@ document.getElementById('appointment-paras').addEventListener('show.bs.modal', f
   });
   document.getElementById('3march').addEventListener('show.bs.modal', function () {
     renderPDF('./assets/Documents/Notice for SGBM dtd. 19.3.2025.pdf', 'pdf-canvas-container-3march');
+  });
+  document.getElementById('minutes-19march').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/Minutes of SGBM dtd 19.3.2025.pdf', 'pdf-canvas-container-19march');
   });
 </script>
 <!-- AOS JavaScript -->

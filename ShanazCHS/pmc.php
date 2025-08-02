@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 
 
-    <title>Sahnaz Chs | PMC
+    <title>Shanaz Chs | PMC
     </title>
 
     <!-- Bootstrap core CSS -->
