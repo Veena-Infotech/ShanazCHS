@@ -1,13 +1,8 @@
-<?php
-session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: index.html");
-    exit();
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
+  <?php require 'PhpFiles/session_protect.php'; ?>
   <head>
     <meta charset="utf-8" />
     <meta
