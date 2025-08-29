@@ -47,10 +47,26 @@ if (isset($_SESSION['pending_user'])) {
 </head>
 <body>
     <?php if (isset($_GET['timeout'])): ?>
-    <div class="alert alert-warning text-center mt-3">
+    <div class="alert alert-warning alert-dismissible fade show text-center mt-3" role="alert">
       Session expired due to inactivity. Please log in again.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   <?php endif; ?>
+
+
+  <?php if (isset($_GET['loggedout'])): ?>
+  <div class="alert alert-success alert-dismissible fade show text-center mt-3" role="alert">
+    You have been logged out successfully.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<?php endif; ?>
+
+<?php if (isset($_GET['error'])): ?>
+  <div class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert">
+    Invalid Email Id or Password. Please try again.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<?php endif; ?>
 
     <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
@@ -139,6 +155,8 @@ if (isset($_SESSION['pending_user'])) {
     
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Bundle JS (with Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

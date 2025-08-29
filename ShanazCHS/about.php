@@ -89,7 +89,7 @@
           <li class="nav-item"><a class="nav-link" href="pmc.php">PMC</a></li>
 
                           <li class="nav-item"><a class="nav-link " href="contact.php">Contact Us</a></li>
-                  <li class="nav-item btn btn-danger" style="background-color:rgba(255, 77, 77, 0.9); margin-left: 10px; border-radius: 10px;"><a class="nav-link " href="logout.php">Log Out</a></li>
+                  <li class="nav-item btn btn-danger" style="background-color:rgba(255, 77, 77, 0.9); margin-left: 10px; border-radius: 10px;"><a class="nav-link " href="PhpFiles/logout.php">Log Out</a></li>
               </ul>
           </div>
       </div>

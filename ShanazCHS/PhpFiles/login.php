@@ -94,7 +94,6 @@ if ($user && $password === $user['password']) {
     header("Location: ../home.php");
     exit;
 } else {
-    echo "<h3 style='color:red; text-align:center; margin-top:50px;'>Invalid login credentials.</h3>";
-    echo "<p style='text-align:center;'><a href='../index.php'>Back to Login</a></p>";
+    header("Location: ../index.php?error=1");
     exit;
 }
