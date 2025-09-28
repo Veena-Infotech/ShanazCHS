@@ -17,7 +17,7 @@
 
 
 
-    <title>Shanaz Chs | Documents
+    <title>SHANAZ CHS | Documents
     </title>
 
     <!-- Bootstrap core CSS -->
@@ -133,6 +133,21 @@
   
   <div class="container overflow-hidden mt-5" data-aos="fade-right">
     <div class="row gy-4 gy-lg-0 gx-xxl-5">
+
+    <div class="col-12 col-md-6 col-lg-3">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="./assets//Documents///SHANAZ AGM NOTICE 2025.png" alt="SHANAZ AGM NOTICE 2025">
+              <figcaption class="m-0 p-4">
+                <h4 class="mb-1">AGM NOTICE 2025</h4>
+                <a data-bs-toggle="modal" data-bs-target="#AGMNOTICE2025" class="contact-btn">Open Document</a>
+
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
 
 
     <div class="col-12 col-md-6 col-lg-3">
@@ -254,6 +269,28 @@
   </div>
   </div>
 
+
+
+
+  <section>
+  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="AGMNOTICE2025" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Container for the PDF rendered by pdf.js -->
+          <div id="container-AGMNOTICE2025"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <section>
   <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="minutesofsgbm5.8.2025" tabindex="-1"
@@ -547,6 +584,10 @@
 }
 
 // Calling function in modal event listener
+
+document.getElementById('AGMNOTICE2025').addEventListener('show.bs.modal', function () {
+    renderPDF('./assets/Documents/SHANAZ AGM NOTICE 2025.pdf', 'container-AGMNOTICE2025');
+});
 
 document.getElementById('minutesofsgbm5.8.2025').addEventListener('show.bs.modal', function () {
     renderPDF('./assets/Documents/MINUTES OF SPL. GEN. BODY MEETING DT. 5.8.2025.pdf', 'pdf-canvas-container-minutesofsgbm5.8.2025');
